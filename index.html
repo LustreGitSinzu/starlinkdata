@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="STARLINK DATA SERVICES LTD – Reliable broadband, wireless internet, networking, ICT solutions and telecommunications across Nigeria. Connecting people, businesses and communities.">
+<meta property="og:title" content="STARLINK DATA SERVICES LTD – Internet & ICT Solutions Nigeria">
+<meta property="og:description" content="Fast, affordable, dependable broadband, networking, and ICT solutions across Nigeria.">
+<meta property="og:type" content="website">
+<title>STARLINK DATA SERVICES LTD | Internet & ICT Solutions Nigeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue-deep:#0A2540;
+  --blue-elec:#0070F3;
+  --blue-cyan:#00D4FF;
+  --white:#FFFFFF;
+  --gray-light:#F8FAFC;
+  --gray-dark:#111827;
+  --gray-mid:#6B7280;
+  --gray-border:#E5E7EB;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.08);
+  --shadow-md:0 4px 16px rgba(0,0,0,.1);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.14);
+  --radius:12px;
+  --radius-lg:20px;
+  --transition:all .3s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;color:var(--gray-dark);background:var(--white);overflow-x:hidden;line-height:1.6}
+
+/* ---- TYPOGRAPHY ---- */
+h1{font-size:clamp(2.2rem,5vw,4.2rem);font-weight:800;line-height:1.1;letter-spacing:-0.03em}
+h2{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.15;letter-spacing:-0.025em}
+h3{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:700;line-height:1.3}
+h4{font-size:1rem;font-weight:700}
+p{font-size:clamp(0.95rem,1.5vw,1.05rem);color:var(--gray-mid);line-height:1.75}
+
+/* ---- NAV ---- */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 clamp(1rem,4vw,3rem);background:rgba(10,37,64,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));border-radius:10px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:22px;height:22px;fill:white}
+.logo-text{color:white;font-weight:800;font-size:1.05rem;letter-spacing:-0.02em;line-height:1.2}
+.logo-text span{display:block;font-size:.65rem;font-weight:500;color:rgba(255,255,255,.55);letter-spacing:.04em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.9rem;font-weight:500;transition:var(--transition)}
+.nav-links a:hover{color:white}
+.nav-cta{background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));color:white;border:none;padding:.55rem 1.25rem;border-radius:8px;font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;transition:var(--transition);text-decoration:none}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,112,243,.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:white;border-radius:2px;transition:var(--transition)}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(10,37,64,.98);backdrop-filter:blur(20px);padding:1.5rem clamp(1rem,4vw,3rem) 2rem;border-bottom:1px solid rgba(255,255,255,.1);z-index:999}
+.mobile-menu a{display:block;color:rgba(255,255,255,.8);text-decoration:none;font-size:1rem;font-weight:500;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-menu .nav-cta{display:inline-block;margin-top:1.25rem}
+
+/* ---- HERO ---- */
+.hero{min-height:100vh;background:linear-gradient(160deg,#060f1e 0%,#0a1f3a 40%,#0d2d52 70%,#0a2540 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:0 clamp(1rem,4vw,3rem)}
+.hero-canvas{position:absolute;inset:0;pointer-events:none}
+.hero-inner{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:8rem 0 5rem}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.25);border-radius:50px;padding:.35rem 1rem;font-size:.8rem;font-weight:600;color:var(--blue-cyan);margin-bottom:1.5rem}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--blue-cyan);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.hero h1{color:white;margin-bottom:1.5rem}
+.hero h1 span{background:linear-gradient(90deg,var(--blue-elec),var(--blue-cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:rgba(255,255,255,.65);font-size:clamp(1rem,1.8vw,1.15rem);margin-bottom:2.5rem;max-width:520px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));color:white;border:none;padding:.85rem 2rem;border-radius:10px;font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;transition:var(--transition);text-decoration:none;display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,112,243,.45)}
+.btn-outline{background:transparent;color:white;border:1.5px solid rgba(255,255,255,.3);padding:.85rem 2rem;border-radius:10px;font-family:inherit;font-size:.95rem;font-weight:600;cursor:pointer;transition:var(--transition);text-decoration:none;display:inline-block}
+.btn-outline:hover{border-color:white;background:rgba(255,255,255,.06)}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-globe{width:100%;max-width:460px;aspect-ratio:1;position:relative}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.hero-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.25rem;backdrop-filter:blur(10px)}
+.hero-stat strong{display:block;color:white;font-size:1.6rem;font-weight:800;letter-spacing:-0.03em}
+.hero-stat span{color:rgba(255,255,255,.5);font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+
+/* ---- SECTIONS ---- */
+.section{padding:clamp(4rem,8vw,7rem) clamp(1rem,4vw,3rem)}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-tag{display:inline-block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue-elec);background:rgba(0,112,243,.08);padding:.3rem .85rem;border-radius:50px;margin-bottom:1rem}
+.section-head{text-align:center;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.section-head h2{color:var(--blue-deep);margin-bottom:1rem}
+.section-head p{max-width:580px;margin:0 auto;font-size:1.05rem}
+
+/* ---- ABOUT ---- */
+.about{background:var(--gray-light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img{background:linear-gradient(135deg,var(--blue-deep),var(--blue-elec));border-radius:var(--radius-lg);aspect-ratio:4/3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.about-pattern{position:absolute;inset:0;opacity:.15}
+.about-content-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);padding:2rem;backdrop-filter:blur(10px)}
+.about-content-card h3{color:white;font-size:1.8rem;font-weight:800;margin-bottom:.75rem}
+.about-content-card p{color:rgba(255,255,255,.75);font-size:.95rem;line-height:1.7}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.value-item{display:flex;align-items:flex-start;gap:.75rem}
+.value-icon{width:36px;height:36px;min-width:36px;background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));border-radius:8px;display:flex;align-items:center;justify-content:center}
+.value-icon svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2}
+.value-text strong{display:block;color:var(--blue-deep);font-size:.9rem;margin-bottom:.2rem}
+.value-text p{font-size:.82rem;color:var(--gray-mid);margin:0;line-height:1.5}
+
+/* ---- SERVICES ---- */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.service-card{background:white;border:1px solid var(--gray-border);border-radius:var(--radius-lg);padding:2rem;transition:var(--transition);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));opacity:0;transition:var(--transition)}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
+.service-card:hover::before{opacity:.04}
+.service-card:hover .service-icon{background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan))}
+.service-card:hover .service-icon svg{stroke:white}
+.service-icon{width:52px;height:52px;background:rgba(0,112,243,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;transition:var(--transition)}
+.service-icon svg{width:24px;height:24px;stroke:var(--blue-elec);fill:none;stroke-width:1.8;transition:var(--transition)}
+.service-card h3{color:var(--blue-deep);margin-bottom:.5rem;font-size:1.05rem}
+.service-card p{font-size:.88rem;line-height:1.65;margin:0}
+
+/* ---- WHY CHOOSE ---- */
+.why{background:var(--blue-deep)}
+.why .section-head h2{color:white}
+.why .section-head p{color:rgba(255,255,255,.6)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1.75rem;transition:var(--transition)}
+.why-card:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.why-num{font-size:.75rem;font-weight:700;color:var(--blue-cyan);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;opacity:.7}
+.why-card h3{color:white;font-size:1rem;margin-bottom:.5rem}
+.why-card p{color:rgba(255,255,255,.5);font-size:.85rem;margin:0;line-height:1.6}
+
+/* ---- INDUSTRIES ---- */
+.industries-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+.industry-card{background:white;border:1px solid var(--gray-border);border-radius:var(--radius);padding:1.75rem 1.25rem;text-align:center;transition:var(--transition);cursor:default}
+.industry-card:hover{border-color:var(--blue-elec);box-shadow:0 4px 20px rgba(0,112,243,.12);transform:translateY(-3px)}
+.industry-icon{width:56px;height:56px;background:linear-gradient(135deg,rgba(0,112,243,.08),rgba(0,212,255,.08));border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.industry-icon svg{width:26px;height:26px;stroke:var(--blue-elec);fill:none;stroke-width:1.8}
+.industry-card h3{font-size:.92rem;color:var(--blue-deep);margin:0}
+
+/* ---- COVERAGE ---- */
+.coverage{background:linear-gradient(160deg,var(--blue-deep),#0d3669)}
+.coverage .section-head h2{color:white}
+.coverage .section-head p{color:rgba(255,255,255,.6)}
+.coverage-map{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:3rem 2rem;text-align:center;min-height:380px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.coverage-svg{width:100%;max-width:640px}
+.coverage-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.cov-stat{text-align:center}
+.cov-stat strong{display:block;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1}
+.cov-stat span{color:rgba(255,255,255,.5);font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+
+/* ---- PROCESS ---- */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--blue-elec),var(--blue-cyan));z-index:0}
+.step{text-align:center;position:relative;z-index:1;padding:0 1rem}
+.step-num{width:80px;height:80px;background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.5rem;font-weight:800;color:white;box-shadow:0 4px 20px rgba(0,112,243,.35)}
+.step h3{color:var(--blue-deep);font-size:1rem;margin-bottom:.5rem}
+.step p{font-size:.85rem;color:var(--gray-mid);margin:0;line-height:1.6}
+
+/* ---- TESTIMONIALS ---- */
+.testimonials{background:var(--gray-light)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.testi-card{background:white;border:1px solid var(--gray-border);border-radius:var(--radius-lg);padding:2rem;position:relative}
+.testi-card::before{content:'"';position:absolute;top:1.25rem;right:1.75rem;font-size:5rem;line-height:1;color:var(--blue-elec);opacity:.08;font-weight:800}
+.testi-stars{display:flex;gap:3px;margin-bottom:1rem}
+.testi-stars span{color:#F59E0B;font-size:1rem}
+.testi-card p{font-size:.9rem;color:#374151;line-height:1.75;margin-bottom:1.25rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:.75rem}
+.testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;color:white}
+.testi-info strong{display:block;font-size:.88rem;color:var(--blue-deep)}
+.testi-info span{font-size:.78rem;color:var(--gray-mid)}
+
+/* ---- CTA ---- */
+.cta-section{background:linear-gradient(135deg,var(--blue-elec),var(--blue-cyan));padding:clamp(4rem,8vw,6rem) clamp(1rem,4vw,3rem);text-align:center}
+.cta-section h2{color:white;margin-bottom:1rem}
+.cta-section p{color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 2rem;font-size:1.05rem}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-white{background:white;color:var(--blue-elec);border:none;padding:.9rem 2rem;border-radius:10px;font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;transition:var(--transition);text-decoration:none;display:inline-block}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.btn-outline-white{background:transparent;color:white;border:2px solid rgba(255,255,255,.5);padding:.9rem 2rem;border-radius:10px;font-family:inherit;font-size:.95rem;font-weight:600;cursor:pointer;transition:var(--transition);text-decoration:none;display:inline-block}
+.btn-outline-white:hover{border-color:white;background:rgba(255,255,255,.1)}
+
+/* ---- CONTACT ---- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem}
+.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem}
+.contact-card{background:white;border:1px solid var(--gray-border);border-radius:var(--radius);padding:1.25rem}
+.contact-card-icon{width:40px;height:40px;background:rgba(0,112,243,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem}
+.contact-card-icon svg{width:20px;height:20px;stroke:var(--blue-elec);fill:none;stroke-width:1.8}
+.contact-card h4{font-size:.82rem;color:var(--gray-mid);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
+.contact-card p{font-size:.88rem;color:var(--blue-deep);font-weight:600;margin:0;line-height:1.5}
+.map-placeholder{background:linear-gradient(135deg,var(--blue-deep),#0d3669);border-radius:var(--radius-lg);height:200px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.9rem;text-align:center;padding:1.5rem}
+.form-group{margin-bottom:1.25rem}
+.form-group label{display:block;font-size:.82rem;font-weight:700;color:var(--blue-deep);margin-bottom:.45rem;letter-spacing:.02em}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--gray-border);border-radius:10px;font-family:inherit;font-size:.9rem;color:var(--gray-dark);background:white;transition:var(--transition);outline:none;-webkit-appearance:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--blue-elec);box-shadow:0 0 0 3px rgba(0,112,243,.1)}
+.form-group textarea{height:130px;resize:vertical;line-height:1.6}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+/* ---- FOOTER ---- */
+footer{background:var(--blue-deep);color:rgba(255,255,255,.6);padding:clamp(3rem,6vw,5rem) clamp(1rem,4vw,3rem) 2rem}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand p{font-size:.88rem;line-height:1.75;margin:1rem 0 1.25rem;max-width:280px}
+.footer-social{display:flex;gap:.75rem}
+.social-btn{width:36px;height:36px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition)}
+.social-btn:hover{background:var(--blue-elec);border-color:var(--blue-elec)}
+.social-btn svg{width:16px;height:16px;fill:white}
+.footer-col h4{color:white;font-size:.88rem;font-weight:700;margin-bottom:1.25rem;letter-spacing:.03em}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:.65rem}
+.footer-col ul li a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.85rem;transition:var(--transition)}
+.footer-col ul li a:hover{color:white}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap 1rem}
+.footer-bottom p{font-size:.8rem;color:rgba(255,255,255,.35)}
+
+/* ---- SCROLL ANIMATIONS ---- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:1024px){
+  .about-grid{grid-template-columns:1fr}
+  .about-img{aspect-ratio:16/7;max-height:320px}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr 1fr;gap:2rem}
+  .process-steps::before{display:none}
+}
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;padding:7rem 0 4rem;text-align:center}
+  .hero p{margin-left:auto;margin-right:auto}
+  .hero-btns{justify-content:center}
+  .hero-visual{display:none}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:block}
+  .values-grid{grid-template-columns:1fr}
+  .coverage-stats{grid-template-columns:1fr 1fr}
+  .contact-cards{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center;gap:.5rem}
+  .process-steps{grid-template-columns:1fr;max-width:400px;margin:0 auto}
+}
+@media(max-width:480px){
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
+  .coverage-stats{grid-template-columns:1fr}
+  .contact-cards{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="logo-text">STARLINK DATA SERVICES<span>Internet & ICT Solutions · Nigeria</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get Connected</a>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMenu()">About Us</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#coverage" onclick="closeMenu()">Coverage</a>
+    <a href="#process" onclick="closeMenu()">How It Works</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="#contact" class="nav-cta" onclick="closeMenu()">Get Connected</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas class="hero-canvas" id="networkCanvas"></canvas>
+  <div class="hero-inner section-inner">
+    <div>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Nigeria's Trusted ISP & ICT Provider</div>
+      <h1>Connecting People, Businesses <span>&amp; Communities</span> Through Reliable Internet</h1>
+      <p>Delivering fast, affordable, and dependable broadband, networking, ICT, and telecommunications solutions across Nigeria.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get Connected</a>
+        <a href="#contact" class="btn-outline">Contact Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>24/7</strong><span>Technical Support</span></div>
+        <div class="hero-stat"><strong>99.5%</strong><span>Uptime SLA</span></div>
+        <div class="hero-stat"><strong>Fast</strong><span>Deployment</span></div>
+        <div class="hero-stat"><strong>LGA+</strong><span>Coverage Growth</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-globe" viewBox="0 0 460 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0070F3" stop-opacity=".3"/>
+            <stop offset="100%" stop-color="#0070F3" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="sphereGrad" cx="35%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#1a4a8a"/>
+            <stop offset="100%" stop-color="#0a1e3d"/>
+          </radialGradient>
+        </defs>
+        <circle cx="230" cy="230" r="200" fill="url(#glow)"/>
+        <circle cx="230" cy="230" r="160" fill="url(#sphereGrad)" stroke="#0070F3" stroke-width=".5" stroke-opacity=".4"/>
+        <!-- Latitude lines -->
+        <ellipse cx="230" cy="230" rx="160" ry="40" stroke="#0070F3" stroke-width=".4" stroke-opacity=".3" fill="none"/>
+        <ellipse cx="230" cy="230" rx="160" ry="80" stroke="#0070F3" stroke-width=".4" stroke-opacity=".25" fill="none"/>
+        <ellipse cx="230" cy="200" rx="155" ry="30" stroke="#0070F3" stroke-width=".3" stroke-opacity=".2" fill="none"/>
+        <ellipse cx="230" cy="260" rx="155" ry="30" stroke="#0070F3" stroke-width=".3" stroke-opacity=".2" fill="none"/>
+        <!-- Longitude lines -->
+        <ellipse cx="230" cy="230" rx="40" ry="160" stroke="#0070F3" stroke-width=".4" stroke-opacity=".3" fill="none"/>
+        <ellipse cx="230" cy="230" rx="80" ry="160" stroke="#0070F3" stroke-width=".4" stroke-opacity=".25" fill="none"/>
+        <line x1="230" y1="70" x2="230" y2="390" stroke="#0070F3" stroke-width=".3" stroke-opacity=".3"/>
+        <line x1="70" y1="230" x2="390" y2="230" stroke="#0070F3" stroke-width=".3" stroke-opacity=".3"/>
+        <!-- Connection nodes -->
+        <circle cx="230" cy="230" r="8" fill="#00D4FF" opacity=".9"><animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="180" cy="190" r="5" fill="#0070F3" opacity=".85"/>
+        <circle cx="290" cy="200" r="5" fill="#0070F3" opacity=".85"/>
+        <circle cx="260" cy="280" r="5" fill="#0070F3" opacity=".85"/>
+        <circle cx="175" cy="265" r="5" fill="#0070F3" opacity=".85"/>
+        <circle cx="330" cy="250" r="4" fill="#00D4FF" opacity=".7"/>
+        <circle cx="155" cy="230" r="4" fill="#00D4FF" opacity=".7"/>
+        <!-- Connection lines -->
+        <line x1="230" y1="230" x2="180" y2="190" stroke="#00D4FF" stroke-width="1" stroke-opacity=".5" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-8" dur="1.5s" repeatCount="indefinite"/></line>
+        <line x1="230" y1="230" x2="290" y2="200" stroke="#00D4FF" stroke-width="1" stroke-opacity=".5" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-8" dur="2s" repeatCount="indefinite"/></line>
+        <line x1="230" y1="230" x2="260" y2="280" stroke="#00D4FF" stroke-width="1" stroke-opacity=".5" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-8" dur="1.8s" repeatCount="indefinite"/></line>
+        <line x1="230" y1="230" x2="175" y2="265" stroke="#00D4FF" stroke-width="1" stroke-opacity=".5" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-8" dur="2.2s" repeatCount="indefinite"/></line>
+        <line x1="230" y1="230" x2="330" y2="250" stroke="#00D4FF" stroke-width=".8" stroke-opacity=".35" stroke-dasharray="3 5"><animate attributeName="stroke-dashoffset" values="0;-8" dur="2.5s" repeatCount="indefinite"/></line>
+        <line x1="230" y1="230" x2="155" y2="230" stroke="#00D4FF" stroke-width=".8" stroke-opacity=".35" stroke-dasharray="3 5"><animate attributeName="stroke-dashoffset" values="0;-8" dur="1.9s" repeatCount="indefinite"/></line>
+        <!-- Orbit ring -->
+        <ellipse cx="230" cy="230" rx="195" ry="50" stroke="#00D4FF" stroke-width=".6" stroke-opacity=".15" fill="none" transform="rotate(-20,230,230)"/>
+        <circle r="6" fill="#00D4FF" opacity=".9">
+          <animateMotion dur="8s" repeatCount="indefinite">
+            <mpath href="#orbitPath"/>
+          </animateMotion>
+        </circle>
+        <path id="orbitPath" d="M 35 230 a 195 50 0 1 1 0 .01" transform="rotate(-20,230,230) translate(230,230)" fill="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <svg class="about-pattern" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width=".5"/></pattern></defs>
+          <rect width="400" height="300" fill="url(#grid)"/>
+        </svg>
+        <div class="about-content-card">
+          <h3>Powering Nigeria's Digital Future</h3>
+          <p>Since our founding, STARLINK DATA SERVICES LTD has been dedicated to building connectivity infrastructure that transforms lives and drives economic growth across Niger State and beyond.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="section-tag">About Us</div>
+        <h2 style="color:var(--blue-deep);margin-bottom:1rem">Who We Are</h2>
+        <p style="margin-bottom:1.25rem">STARLINK DATA SERVICES LTD is a registered Internet Service Provider and ICT solutions company headquartered in Bosso, Niger State, Nigeria. We deliver enterprise-grade connectivity and technology services to individuals, businesses, institutions, and communities.</p>
+        <p style="margin-bottom:2rem">Our mission is to provide reliable, affordable, and high-quality internet and telecommunications services that promote digital connectivity, communication, innovation, and economic development across Nigeria.</p>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="value-text"><strong>Reliability</strong><p>Consistent, high-quality service delivery you can depend on</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <div class="value-text"><strong>Speed</strong><p>Fast broadband optimized for every user and use case</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="value-text"><strong>Community</strong><p>Committed to bridging the digital divide in Nigeria</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="value-text"><strong>Innovation</strong><p>Always adopting the latest technology for better outcomes</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-tag">Our Services</div>
+      <h2>End-to-End Connectivity & ICT Solutions</h2>
+      <p>From home broadband to enterprise networking, we deliver the full spectrum of internet and ICT services your business needs to grow.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+        <h3>Internet & Broadband</h3>
+        <p>High-speed home and business internet with dedicated connections, reliable uptime, and flexible plans to suit every need.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M5 12.55a11 11 0 0 1 14.08 0"/><rect x="7" y="16" width="10" height="6" rx="1"/></svg></div>
+        <h3>Wireless Broadband</h3>
+        <p>Last-mile wireless connectivity solutions for areas without wired infrastructure. Fast, stable, and cost-effective.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h3>Networking Solutions</h3>
+        <p>LAN/WAN design, installation, and management. We build resilient network infrastructure for organizations of all sizes.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <h3>Hotspot Solutions</h3>
+        <p>Public and private Wi-Fi hotspot deployment for hotels, campuses, markets, and community spaces with billing management.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14M8.46 8.46a5 5 0 0 0 0 7.07"/></svg></div>
+        <h3>ICT Consultancy</h3>
+        <p>Strategic technology advisory services to help organizations plan, implement, and optimize their ICT infrastructure.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" y1="19" x2="19" y2="13"/><line x1="16" y1="16" x2="20" y2="20"/><line x1="19" y1="21" x2="21" y2="19"/></svg></div>
+        <h3>Infrastructure Deployment</h3>
+        <p>End-to-end deployment of telecom towers, cabling, equipment, and network infrastructure across urban and rural areas.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 9H4a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1l1 4 1-4h2V9z"/><path d="M13 5h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6l-2 2V7l2-2z"/></svg></div>
+        <h3>Technical Support</h3>
+        <p>Responsive 24/7 technical support team providing troubleshooting, maintenance, and on-site assistance when you need it.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Digital Solutions</h3>
+        <p>Custom digital communication and technology solutions including system integration and network monitoring platforms.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why" id="why">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-tag" style="background:rgba(0,212,255,.1);color:var(--blue-cyan)">Why Choose Us</div>
+      <h2 style="color:white">Built for Nigeria. Built to Last.</h2>
+      <p style="color:rgba(255,255,255,.6)">We combine enterprise-grade technology with local expertise to deliver connectivity solutions that truly work for our communities.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-num">01</div><h3>Reliable Connectivity</h3><p>Robust, redundant network architecture ensures your connection stays up even when conditions are challenging.</p></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-num">02</div><h3>Affordable Pricing</h3><p>Flexible plans designed to be accessible for individuals, businesses, schools, and government institutions.</p></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-num">03</div><h3>Expert Technical Support</h3><p>Certified engineers and support staff available around the clock to keep your operations running smoothly.</p></div>
+      <div class="why-card reveal reveal-delay-3"><div class="why-num">04</div><h3>Enterprise Infrastructure</h3><p>Industrial-grade equipment and network design standards borrowed from global telecom best practices.</p></div>
+      <div class="why-card reveal"><div class="why-num">05</div><h3>Fast Deployment</h3><p>Our streamlined installation process gets you online faster, minimizing disruption to your business or home.</p></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-num">06</div><h3>Scalable Solutions</h3><p>Start small and grow. Our infrastructure scales with you from a single connection to an enterprise network.</p></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-num">07</div><h3>Customer-Centered</h3><p>Every solution is tailored to your specific needs. We listen first, then deliver exactly what works for you.</p></div>
+      <div class="why-card reveal reveal-delay-3"><div class="why-num">08</div><h3>Nationwide Growth</h3><p>Actively expanding our coverage footprint across Niger State and all of Nigeria with a long-term commitment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section" id="industries">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-tag">Who We Serve</div>
+      <h2>Industries & Communities We Connect</h2>
+      <p>Providing tailored internet and ICT solutions across every sector of Nigerian society.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card reveal">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Homes</h3>
+      </div>
+      <div class="industry-card reveal reveal-delay-1">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>Businesses</h3>
+      </div>
+      <div class="industry-card reveal reveal-delay-2">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>Schools</h3>
+      </div>
+      <div class="industry-card reveal reveal-delay-3">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Government</h3>
+      </div>
+      <div class="industry-card reveal">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>NGOs</h3>
+      </div>
+      <div class="industry-card reveal reveal-delay-1">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Healthcare</h3>
+      </div>
+      <div class="industry-card reveal reveal-delay-2">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><circle cx="17" cy="6" r="3"/></svg></div>
+        <h3>Rural Communities</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="section coverage" id="coverage">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-tag" style="background:rgba(0,212,255,.1);color:var(--blue-cyan)">Network Coverage</div>
+      <h2>Expanding Connectivity Across Nigeria</h2>
+      <p style="color:rgba(255,255,255,.6)">Starting from Bosso, Niger State, our network footprint is growing steadily to reach more communities.</p>
+    </div>
+    <div class="coverage-map reveal">
+      <svg class="coverage-svg" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified Nigeria outline -->
+        <path d="M120 100 L180 80 L250 70 L320 75 L390 68 L460 85 L510 110 L530 150 L520 200 L530 240 L510 280 L480 320 L440 350 L400 360 L360 355 L330 370 L300 365 L270 360 L240 355 L210 350 L180 330 L150 300 L120 270 L100 240 L90 200 L95 160 Z" stroke="#0070F3" stroke-width="1.5" stroke-opacity=".5" fill="rgba(0,112,243,.06)"/>
+        <!-- Niger State highlight -->
+        <ellipse cx="270" cy="220" rx="70" ry="55" fill="rgba(0,212,255,.12)" stroke="#00D4FF" stroke-width="1.5" stroke-opacity=".7"/>
+        <!-- Coverage circles -->
+        <circle cx="270" cy="225" r="30" fill="rgba(0,112,243,.2)" stroke="#0070F3" stroke-width="1"><animate attributeName="r" values="30;40;30" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite"/></circle>
+        <circle cx="270" cy="225" r="10" fill="#00D4FF"/>
+        <!-- Other coverage points -->
+        <circle cx="370" cy="180" r="18" fill="rgba(0,112,243,.15)" stroke="#0070F3" stroke-width="1" stroke-opacity=".6"/>
+        <circle cx="370" cy="180" r="6" fill="#0070F3" opacity=".8"/>
+        <circle cx="180" cy="190" r="14" fill="rgba(0,112,243,.12)" stroke="#0070F3" stroke-width="1" stroke-opacity=".5"/>
+        <circle cx="180" cy="190" r="5" fill="#0070F3" opacity=".7"/>
+        <circle cx="430" cy="270" r="14" fill="rgba(0,212,255,.1)" stroke="#00D4FF" stroke-width="1" stroke-opacity=".5"/>
+        <circle cx="430" cy="270" r="5" fill="#00D4FF" opacity=".7"/>
+        <!-- Connecting lines -->
+        <line x1="270" y1="225" x2="370" y2="180" stroke="#0070F3" stroke-width=".8" stroke-opacity=".4" stroke-dasharray="4 4"/>
+        <line x1="270" y1="225" x2="180" y2="190" stroke="#0070F3" stroke-width=".8" stroke-opacity=".4" stroke-dasharray="4 4"/>
+        <line x1="270" y1="225" x2="430" y2="270" stroke="#00D4FF" stroke-width=".8" stroke-opacity=".35" stroke-dasharray="4 6"/>
+        <!-- Labels -->
+        <text x="270" y="268" fill="#00D4FF" font-size="11" font-family="Manrope,sans-serif" font-weight="600" text-anchor="middle">Bosso · HQ</text>
+        <text x="370" y="168" fill="rgba(255,255,255,.6)" font-size="10" font-family="Manrope,sans-serif" text-anchor="middle">Minna</text>
+        <text x="180" y="180" fill="rgba(255,255,255,.6)" font-size="10" font-family="Manrope,sans-serif" text-anchor="middle">Kontagora</text>
+        <text x="430" y="260" fill="rgba(255,255,255,.6)" font-size="10" font-family="Manrope,sans-serif" text-anchor="middle">Expansion</text>
+        <!-- Future expansion dots -->
+        <circle cx="320" cy="140" r="4" fill="rgba(255,255,255,.25)" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+        <circle cx="460" cy="200" r="4" fill="rgba(255,255,255,.25)" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+        <circle cx="220" cy="310" r="4" fill="rgba(255,255,255,.25)" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+        <text x="490" y="80" fill="rgba(255,255,255,.25)" font-size="9" font-family="Manrope,sans-serif">● Active Coverage</text>
+        <text x="490" y="96" fill="rgba(255,255,255,.2)" font-size="9" font-family="Manrope,sans-serif">○ Planned Expansion</text>
+      </svg>
+    </div>
+    <div class="coverage-stats reveal">
+      <div class="cov-stat"><strong>Niger State</strong><span>Primary Coverage</span></div>
+      <div class="cov-stat"><strong>Growing</strong><span>Network Reach</span></div>
+      <div class="cov-stat"><strong>National</strong><span>Vision & Ambition</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-tag">How It Works</div>
+      <h2>Getting Connected Is Simple</h2>
+      <p>Our streamlined 4-step process gets you from inquiry to fully operational internet connection with minimal disruption.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Consultation</h3>
+        <p>Contact our team and we'll assess your needs, location, and the best service options available to you.</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">2</div>
+        <h3>Site Assessment</h3>
+        <p>Our engineers visit your location to evaluate signal strength, infrastructure requirements, and optimal setup.</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num">3</div>
+        <h3>Installation</h3>
+        <p>Professional installation of all equipment and infrastructure, tested and optimized before handover.</p>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-num">4</div>
+        <h3>Ongoing Support</h3>
+        <p>24/7 monitoring and responsive technical support to ensure your connection stays fast and reliable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-tag">Testimonials</div>
+      <h2>Trusted Across Niger State</h2>
+      <p>Hear from businesses, schools, and individuals who rely on STARLINK DATA SERVICES every day.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p>Since switching to STARLINK DATA SERVICES, our business operations have improved dramatically. The connection is stable even during peak hours, and when we had a technical issue, their support team was on-site within hours.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div class="testi-info"><strong>Alhaji Abubakar Kwara</strong><span>Managing Director, Kwara Enterprises · Minna</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p>Our school now has reliable internet for the first time. Students can access online learning resources, teachers can use digital tools, and our administrative systems run smoothly. It has genuinely transformed education here.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">FO</div>
+          <div class="testi-info"><strong>Mrs. Fatima Ogah</strong><span>Principal, Bosso Secondary School</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p>As a government institution, reliability is non-negotiable for us. STARLINK DATA SERVICES delivered an enterprise-grade connection with excellent uptime and professional maintenance. Their team understands our requirements perfectly.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">IS</div>
+          <div class="testi-info"><strong>Ibrahim Suleiman</strong><span>IT Director, Niger State Government Agency</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div style="max-width:700px;margin:0 auto" class="reveal">
+    <h2>Ready to Experience Reliable Internet?</h2>
+    <p>Join hundreds of homes, businesses, and institutions across Niger State already connected through STARLINK DATA SERVICES LTD.</p>
+    <div class="cta-btns">
+      <a href="#contact" class="btn-white">Request Service</a>
+      <a href="#contact" class="btn-outline-white">Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-tag">Get in Touch</div>
+      <h2>Start Your Connection Today</h2>
+      <p>Our team is ready to help you find the right internet and ICT solution. Reach out and we'll respond promptly.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h4>Address</h4>
+            <p>No. 15, Sabon Unguwa Bosso, Bosso, Niger State, Nigeria</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.73 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6.29 6.29l.82-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <h4>Phone</h4>
+            <p>Available upon request</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <h4>Email</h4>
+            <p>info@starlinkdata.com.ng</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h4>Working Hours</h4>
+            <p>Mon–Fri: 8am–6pm<br>Sat: 9am–3pm</p>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" style="margin:0 auto 0.75rem;display:block"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p style="color:rgba(255,255,255,.5);font-size:.85rem;margin:0">No. 15, Sabon Unguwa Bosso<br>Bosso LGA · Niger State · Nigeria</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div style="background:var(--gray-light);border-radius:var(--radius-lg);padding:2.5rem">
+          <h3 style="color:var(--blue-deep);margin-bottom:1.75rem;font-size:1.2rem">Send Us a Message</h3>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+234 000 000 0000">
+            </div>
+            <div class="form-group">
+              <label for="service">Service Required</label>
+              <select id="service">
+                <option value="">Select a service...</option>
+                <option>Home Broadband Internet</option>
+                <option>Business Internet</option>
+                <option>Wireless Broadband</option>
+                <option>Networking Solutions</option>
+                <option>Hotspot Solutions</option>
+                <option>ICT Consultancy</option>
+                <option>Infrastructure Deployment</option>
+                <option>Technical Support</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell us about your connectivity needs, location, and any specific requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;border:none;font-family:inherit">Send Message</button>
+          </form>
+          <div id="formSuccess" style="display:none;margin-top:1rem;background:rgba(0,112,243,.08);border:1px solid rgba(0,112,243,.2);border-radius:10px;padding:1rem;text-align:center;color:var(--blue-elec);font-weight:600;font-size:.9rem">
+            ✓ Thank you! We'll be in touch within 24 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="margin-bottom:0">
+          <div class="logo-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div class="logo-text" style="color:white">STARLINK DATA SERVICES<span style="color:rgba(255,255,255,.4)">Internet & ICT Solutions · Nigeria</span></div>
+        </a>
+        <p>Connecting people, businesses, and communities across Nigeria with reliable, affordable internet and ICT solutions.</p>
+        <div class="footer-social">
+          <div class="social-btn" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn" title="Twitter/X"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></div>
+          <div class="social-btn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div class="social-btn" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#coverage">Coverage</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Home Internet</a></li>
+          <li><a href="#services">Business Internet</a></li>
+          <li><a href="#services">Wireless Broadband</a></li>
+          <li><a href="#services">Networking Solutions</a></li>
+          <li><a href="#services">Hotspot Solutions</a></li>
+          <li><a href="#services">ICT Consultancy</a></li>
+          <li><a href="#services">Technical Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">No. 15, Sabon Unguwa Bosso</a></li>
+          <li><a href="#">Bosso LGA, Niger State</a></li>
+          <li><a href="#">Nigeria</a></li>
+          <li><a href="mailto:info@starlinkdata.com.ng">info@starlinkdata.com.ng</a></li>
+          <li><a href="#">Mon–Fri: 8am – 6pm</a></li>
+          <li><a href="#">Saturday: 9am – 3pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 STARLINK DATA SERVICES LTD. All Rights Reserved. · RC: Nigeria</p>
+      <p>Bosso, Niger State, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Network canvas animation
+const canvas = document.getElementById('networkCanvas');
+const ctx = canvas.getContext('2d');
+let nodes = [], W, H;
+
+function resize(){
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+for(let i=0;i<55;i++){
+  nodes.push({
+    x: Math.random()*100,
+    y: Math.random()*100,
+    vx:(Math.random()-.5)*.15,
+    vy:(Math.random()-.5)*.15,
+    r: Math.random()*2.5+1
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  const pts = nodes.map(n=>({x:n.x/100*W, y:n.y/100*H, r:n.r}));
+  for(let i=0;i<pts.length;i++){
+    for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<160){
+        ctx.beginPath();
+        ctx.moveTo(pts[i].x,pts[i].y);
+        ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle=`rgba(0,212,255,${0.12*(1-d/160)})`;
+        ctx.lineWidth=.8;
+        ctx.stroke();
+      }
+    }
+  }
+  pts.forEach((p,i)=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(0,212,255,.45)';
+    ctx.fill();
+    nodes[i].x+=nodes[i].vx;
+    nodes[i].y+=nodes[i].vy;
+    if(nodes[i].x<0||nodes[i].x>100) nodes[i].vx*=-1;
+    if(nodes[i].y<0||nodes[i].y>100) nodes[i].vy*=-1;
+  });
+  requestAnimationFrame(draw);
+}
+draw();
+
+// Mobile menu
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+},{threshold:.12});
+reveals.forEach(el=>observer.observe(el));
+
+// Form
+function handleSubmit(e){
+  e.preventDefault();
+  document.getElementById('formSuccess').style.display='block';
+  e.target.reset();
+  setTimeout(()=>document.getElementById('formSuccess').style.display='none',5000);
+}
+
+// Navbar scroll effect
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('navbar');
+  if(window.scrollY>60){
+    nav.style.background='rgba(10,37,64,.98)';
+    nav.style.boxShadow='0 4px 24px rgba(0,0,0,.25)';
+  } else {
+    nav.style.background='rgba(10,37,64,.92)';
+    nav.style.boxShadow='none';
+  }
+});
+</script>
+</body>
+</html>
